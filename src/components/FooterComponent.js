@@ -3,11 +3,12 @@ import React from 'react';
 function Footer()
 {
     return(
-        <div className="footer">
         <div className="container">
-            <div className="row justify-content-center">             
+        <div className="footer row">
+        
+            <div className="justify-content-center">             
                
-                <div className="col-7 col-sm-5">
+                <div className="col-12 col-sm-5">
                     <h5>Our Address</h5>
                     <address>
 		              4th MAIN ROAD,<br />
@@ -19,12 +20,13 @@ function Footer()
                          gpsuhas20@gmail.com</a>
                     </address>
                 </div> 
-                <div className="col-12 col-sm-5">
+                <div className="col-12 col-sm-5 ">
+                    
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.210696164207!2d77.58947291409599!3d13.022250590822683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17b0b8ca8bf7%3A0x401f13df09cce5db!2sSri%20Balaji%20Stores!5e0!3m2!1sen!2sin!4v1597945725467!5m2!1sen!2sin" ></iframe>
                 </div>
             </div>
-            <div className="row jsutify-content-center">
-                <div className=" offset-1 col-12 col-sm-3"><h4>Payments Options</h4></div>
+            <div className="row justify-content-center">
+                <div className=" col-12 col-sm-3"><h4>Payments Options</h4></div>
                 <div className=" col-6  col-sm-1 btn menu">
         <img src={`${process.env.PUBLIC_URL}/images/phonepe.png`}style={{width:"20px"},{height:"20px"}}></img>
 

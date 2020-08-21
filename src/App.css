@@ -53,6 +53,7 @@
     padding:0px!important;
     margin:0px!important;
     margin-top:5px!important;
+    font-size:20px!important;
 
   }
  
@@ -82,7 +83,8 @@
 #searchicon
 {
   position:absolute;
-  right:18px;
+  right:10px;
+  top:6px;
   
 }
 .footer
@@ -93,7 +95,23 @@
 }
 
 [class*="col-"] {
-  padding-right: 5px;
+  padding-right: 10px;
   padding-left: 5px;
   
+
+  
+}
+
+@media (max-width: 576px) {
+  .heading{
+    font-size:8px!important;
+  }
+ 
+}
+@media (max-width: 320px) {
+  iframe{
+    width: 95%;
+    
+  }
+ 
 }

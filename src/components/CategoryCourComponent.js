@@ -17,6 +17,7 @@ function Categ()
       
     return(
     <>
+    <div className="container">
       <h1 style={{ textAlign: "center" }}>Example to setup your carousel in react</h1>
       <div>
         <Carousel breakPoints={breakPoints} style={{height:"300px"},{backgroundcolor:"orange"}} enableAutoPlay autoPlaySpeed={1500}>
@@ -29,6 +30,7 @@ function Categ()
           <img src={`${process.env.PUBLIC_URL}/images/surf2.jpg`} className="d-block w-100"style={{height:"300px"}}></img>
           <img src={`${process.env.PUBLIC_URL}/images/surf2.jpg`} className="d-block w-100"style={{height:"300px"}}></img>
         </Carousel>
+      </div>
       </div>
     </>
   );

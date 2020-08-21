@@ -78,46 +78,49 @@ function Home()
 <Jumbotron className="jumbotron fluid"  >
 
    
-<div className=" container-fluid heading justify-content-center" >
+<div className=" container heading justify-content-center" >
     <div className="row no-gutters ">
-    <div className=" col-lg-2"><img src={`${process.env.PUBLIC_URL}/images/nav.png`}className="btn menu" style={{width:"6vw"},{height:"6vh"}}/></div>
-    <div className="col-lg-2"></div>
-    <div className=" col-lg-1  btn menu">
-        <img src={`${process.env.PUBLIC_URL}/images/logo.jpg`}style={{width:"7vw"},{height:"7vh"}}></img>
+
+    <div className=" col-1 col-sm-2"><img src={`${process.env.PUBLIC_URL}/images/nav.png`}className="btn menu" style={{width:"4vw"},{height:"4vh"}}/></div>
+    <div className=" col-1 col-sm-2"></div>
+    <div className=" col-1 col-sm-1  btn menu">
+        <img src={`${process.env.PUBLIC_URL}/images/logo.jpg`}style={{width:"5vw"},{height:"5vh"}}></img>
     </div>
-        <div className=" col-lg-6">
+    <div className=" col-1 col-sm-1">
+   
+
+   </div>
+          
+        <div className="col-8 col-sm-6">
      
-        <p className="w-100"style={{fontSize:"5vh"}}>Sri Balaji Stores</p>
+        <p style={{fontSize:"1.5rem"}}>Sri Balaji Stores</p>
         
         </div>
-        <div className="col-lg-1">
-    <div className="btn menu" style={{fontSize:"2vh"}}>
        
-        <img  src={`${process.env.PUBLIC_URL}/images/login.png`} style={{width:"6vw"},{height:"6vh"}}></img>
-        <span style={{color:"white"}}><strong>Login/Signup</strong></span>
-    </div>
-
-</div>
-       
-        
+</div>        
       
+<div className="row">
 
-
-<div className="offset-lg-1 col-lg-9 ">
+<div className=" col-7 offset-sm-1 col-sm-7 ">
 <Form>
 
  
-<div className="row">
- <div className="col-lg-12 "><input type="text" className="form-control" id="search" name="search" placeholder="Search for Products" /></div>
- <img src={`${process.env.PUBLIC_URL}/images/search.png`}className="btn menu" style={{width:"7vw"},{height:"7vh"}} id="searchicon"/>
+
+ <input type="text" className="form-control" id="search" name="search" placeholder="Search for Products" />
+ <img src={`${process.env.PUBLIC_URL}/images/search.png`}className="btn menu" style={{width:"5vw"},{height:"5vh"}} id="searchicon"/>
  
  
- </div>
+ 
  
  
 </Form>
 </div>
-<div className="offset-lg-1 col-lg-1"><img  src={`${process.env.PUBLIC_URL}/images/cart.png`} className="btn menu" style={{width:"6vw"},{height:"6vh"}}/>price</div>
+<div className="  col-2 col-sm-2 btn menu" style={{fontSize:".8rem"}}>
+       
+        <img  src={`${process.env.PUBLIC_URL}/images/login.png`} style={{width:"1rem"},{height:"1rem"}}></img>
+        <p style={{color:"white"}}>Signup</p>
+    </div>
+<div className=" col-2 col-sm-2"><img  src={`${process.env.PUBLIC_URL}/images/cart.png`} className="btn menu" style={{width:"2rem"},{height:"2rem"}}/></div>
 
 
 

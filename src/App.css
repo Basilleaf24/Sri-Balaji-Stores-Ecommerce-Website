@@ -1,3 +1,7 @@
+*
+{
+  box-sizing: border-box!important;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +39,53 @@
   to {
     transform: rotate(360deg);
   }
+}
+/* jumbotron*/
+.jumbotron
+{
+  background-color:black!important;
+  height: 200px!important;
+  padding:10px!important;
+  color:whitesmoke!important;
+}
+@media (max-width: 1400px) {
+  .heading{
+    padding:0px!important;
+    margin:0px!important;
+  }
+ 
+}
+
+.btn{
+  padding:0px;
+  margin:0px;
+  
+
+}
+.btn:active
+{
+  
+}
+
+.menu:active
+{
+  transform :translateY(4px) scale(0.8);
+  
+  
+}
+#search
+{
+ position:relative;
+}
+#searchicon
+{
+  position:absolute;
+  right:18px;
+  
+}
+.footer
+{
+  color:white;
+  padding:20px;
+  background-color:black;
 }

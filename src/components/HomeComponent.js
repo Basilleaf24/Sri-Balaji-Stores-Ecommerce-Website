@@ -7,6 +7,69 @@ import Footer from './FooterComponent'
 //import logo from '/l1.png'
 
 
+/*function Home()
+{ 
+    return(
+        <>
+        <div>
+<Jumbotron className="jumbotron fluid"  >
+
+   
+<div className=" container heading justify-content-center  m-0 p-0" >
+    <div className="row no-gutters ">
+    <div className="col-lg-1 btn menu p-1">
+        <img src={`${process.env.PUBLIC_URL}/images/logo.jpg`}style={{width:"15vw"},{height:"15vh"}}></img>
+    </div>
+        <div className="offset-lg-4 col-lg-7">
+     
+        <p className="w-100"style={{fontSize:"7vh"}}>Sri Balaji Stores</p>
+        
+        </div>
+       
+        
+      
+<div className="col-lg-1"><img src={`${process.env.PUBLIC_URL}/images/nav.png`}className="btn menu" style={{width:"8vw"},{height:"8vh"}}/></div>
+<div className="order-lg-last col-lg-1"><img  src={`${process.env.PUBLIC_URL}/images/cart.png`} className="btn menu" style={{width:"7vw"},{height:"7vh"}}/>price</div>
+
+
+<div className="col-lg-9 ">
+<Form>
+
+                       
+ <div class="col-lg-12">
+<div className="row">
+ <div className="col-lg-12 "><input type="text" className="form-control" id="search" name="search" placeholder="Search for Products" /></div>
+ <img src={`${process.env.PUBLIC_URL}/images/search.png`}className="btn menu" style={{width:"7vw"},{height:"7vh"}} id="searchicon"/>
+ 
+ </div>
+ </div>
+ 
+ 
+</Form>
+</div>
+<div className="col-lg-1">
+    <div className="btn menu" style={{fontSize:"2vh"}}>
+       
+        <img  src={`${process.env.PUBLIC_URL}/images/login.png`} style={{width:"8vw"},{height:"8vh"}}></img>
+        <span style={{color:"white"}}>Login/Signup</span>
+    </div>
+
+</div>
+
+</div>
+</div>
+</Jumbotron>
+</div>
+<div>
+<Categ/>
+</div>
+<div>
+<Footer/>
+</div>
+</>
+    )
+}*/
+
 function Home()
 { 
     return(
@@ -15,53 +78,50 @@ function Home()
 <Jumbotron className="jumbotron fluid"  >
 
    
-<div className="container heading" >
-    <div className="row ">
-    <div className="offset-2 col-2 btn menu">
-        <img src={`${process.env.PUBLIC_URL}/images/logo.jpg`}style={{width:"90px"},{height:"90px"}}></img>
-
-        </div>
-        <div className="col-6 ">
+<div className=" container-fluid heading justify-content-center" >
+    <div className="row no-gutters ">
+    <div className=" col-lg-2"><img src={`${process.env.PUBLIC_URL}/images/nav.png`}className="btn menu" style={{width:"6vw"},{height:"6vh"}}/></div>
+    <div className="col-lg-2"></div>
+    <div className=" col-lg-1  btn menu">
+        <img src={`${process.env.PUBLIC_URL}/images/logo.jpg`}style={{width:"7vw"},{height:"7vh"}}></img>
+    </div>
+        <div className=" col-lg-6">
      
-        <p className="mb-20 mt-10" style={{fontSize:"300%"}}>Sri Balaji Stores</p>
+        <p className="w-100"style={{fontSize:"5vh"}}>Sri Balaji Stores</p>
         
         </div>
+        <div className="col-lg-1">
+    <div className="btn menu" style={{fontSize:"2vh"}}>
        
-        </div>
-        <Row>
-<div className="col-4 col-sm-1 "><img src={`${process.env.PUBLIC_URL}/images/nav.png`}className="btn menu" style={{width:"50px"},{height:"80px"}}/></div>
-
-<div className="col-4 col-sm-8">
-<Form>
-<div class="form-group row">
-                       
- <div class="col-sm-11">
-<div className="row">
- <div className="col-12 "><input type="text" className="form-control" id="search" name="search" placeholder="Search for Products" /></div>
- <img src={`${process.env.PUBLIC_URL}/images/search.png`}className="btn menu" style={{width:"36px"},{height:"38px"}} id="searchicon"/>
- 
- </div>
- </div>
- 
- 
-</div>
-</Form>
-
-
-
-
-
-</div>
-<div className="col-sm-2">
-    <div className="btn menu" style={{fontSize:"20px"}}>
-       
-        <img  src={`${process.env.PUBLIC_URL}/images/login.png`} style={{width:"35px"},{height:"35px"}}></img>
-        <span style={{color:"white"}}>Login/Signup</span>
+        <img  src={`${process.env.PUBLIC_URL}/images/login.png`} style={{width:"6vw"},{height:"6vh"}}></img>
+        <span style={{color:"white"}}><strong>Login/Signup</strong></span>
     </div>
 
 </div>
-<div className="col-4 col-sm-1"><img  src={`${process.env.PUBLIC_URL}/images/cart.png`} className="btn menu" style={{width:"50px"},{height:"50px"}}/>price</div>
-</Row>
+       
+        
+      
+
+
+<div className="offset-lg-1 col-lg-9 ">
+<Form>
+
+ 
+<div className="row">
+ <div className="col-lg-12 "><input type="text" className="form-control" id="search" name="search" placeholder="Search for Products" /></div>
+ <img src={`${process.env.PUBLIC_URL}/images/search.png`}className="btn menu" style={{width:"7vw"},{height:"7vh"}} id="searchicon"/>
+ 
+ 
+ </div>
+ 
+ 
+</Form>
+</div>
+<div className="offset-lg-1 col-lg-1"><img  src={`${process.env.PUBLIC_URL}/images/cart.png`} className="btn menu" style={{width:"6vw"},{height:"6vh"}}/>price</div>
+
+
+
+</div>
 </div>
 </Jumbotron>
 </div>
@@ -74,5 +134,6 @@ function Home()
 </>
     )
 }
+
 
 export default Home

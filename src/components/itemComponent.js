@@ -16,10 +16,6 @@ return(
       <p><button className=" btn cartbutton">-</button><span style={{fontSize:"0.7rem"}}><b>Add to Cart</b></span><button className="cartbutton btn">+</button></p>
     </CardBody>
   </Card>)
-
-
-
-
 }
 
 function Item(props)

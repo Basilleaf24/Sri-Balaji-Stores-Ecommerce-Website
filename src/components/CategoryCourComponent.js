@@ -3,7 +3,9 @@ import {Card,CardImg,CardText,CardTitle,CardSubtitle, CardBody,Jumbotron, Row,Fo
 
 import styled from'styled-components'
 import Carousel from "react-elastic-carousel";
-
+import RenderItem from './CarouselItem'
+import data from '../shared/data'
+import Item from 'react-elastic-carousel'
 
 function Categ()
 {
@@ -15,7 +17,7 @@ function Categ()
         { width: 1200, itemsToShow: 4 },
       ];
       
-    return(
+   /* return(
     <>
     <div className="container">
       <h1 style={{ textAlign: "center" }}>Example to setup your carousel in react</h1>
@@ -29,11 +31,38 @@ function Categ()
           <img src={`${process.env.PUBLIC_URL}/images/surf2.jpg`} className="d-block w-100"style={{height:"300px"}}></img>
           <img src={`${process.env.PUBLIC_URL}/images/surf2.jpg`} className="d-block w-100"style={{height:"300px"}}></img>
           <img src={`${process.env.PUBLIC_URL}/images/surf2.jpg`} className="d-block w-100"style={{height:"300px"}}></img>
+          
         </Carousel>
       </div>
       </div>
     </>
-  );
+  );*/
+const k=data.products.map((product)=>
+{
+  return(
+    <RenderItem product={product}/>
+  )
+})
+  return(
+    <div className="container">
+       <div className="row">
+        <Carousel>
+         
+          {k.map((product)=>
+          {
+            return(
+              <Item>{product}</Item>       
+               )
+          })}
+          
+        </Carousel>
+      </div>
+    </div>
+
+
+
+
+  )
 }
                
 

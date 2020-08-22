@@ -26,6 +26,15 @@ export default{
                 "qty": "2kg",
                 "sp":450
               ,
-            }
+            },
+            {
+                           
+              "name": "Surf Excel Front",
+              "image": "/images/surf.jpg",
+              "mrp": 540,
+              "qty": "2kg",
+              "sp":450
+            ,
+          }
     ]
 }

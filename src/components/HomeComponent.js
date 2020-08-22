@@ -5,67 +5,56 @@ import Categ from './CategoryCourComponent'
 import Footer from './FooterComponent'
 import Item from './itemComponent'
 
-
+import Carousel from "react-elastic-carousel";
 function Home()
 { 
+     
+    const breakPoints = [
+        { width: 1, itemsToShow: 1 },
+        { width: 550, itemsToShow: 2 },
+        { width: 768, itemsToShow: 3 },
+        { width: 1200, itemsToShow: 4 },
+      ];
     return(
         <>
-        <div>
-<Jumbotron className="jumbotron jumbo">
+<nav className="navbar fixed-top navbar-light bg-dark">
+  <a className="navbar-brand "><img src={`${process.env.PUBLIC_URL}/images/nav.png`}className="btn menu" style={{width:"1.5rem"},{height:"1.5rem"}}/>
+</a>
 
-   
-<div className=" container heading justify-content-center" >
-    <div className="row no-gutters ">
-
-    <div className=" col-1 col-sm-2"><img src={`${process.env.PUBLIC_URL}/images/nav.png`}className="btn menu" style={{width:"1.5rem"},{height:"1.5rem"}}/></div>
-    <div className=" col-1 col-sm-2"></div>
-    <div className=" col-1 col-sm-1 btn menu">
-        <img src={`${process.env.PUBLIC_URL}/images/logo.jpg`}style={{width:"2.7rem"},{height:"2.7rem"}}></img>
-    
-    </div>
- 
-          <div className=" offset-1 col-8 offset-sm-0 col-sm-5">
-       
-          <p style={{fontSize:"1.7rem"}}>Sri Balaji Stores</p>
-      
-      </div>
-    
-          
+<ul className="navbar-nav">
+      <li className="nav-item col-1 col-lg-1">
+        <a className="nav-link" href="/"><img src={`${process.env.PUBLIC_URL}/images/logo.jpg`}style={{width:"2.7rem"},{height:"2.7rem"}}></img>
+</a>
+      </li>
          
-       
-</div>        
-      
-<div className="row">
+      </ul>
+<span className="nav-item col-7 col-lg-2" style={{fontSize:"1rem"}}>Sri Balaji Stores</span>
+<form className="nav-item form-inline col-10 col-md-11 col-lg-8">
+    <input type="text" className="form-control" placeholder="Search For Products" style={{width:"100%"}}/>
+    <img src={`${process.env.PUBLIC_URL}/images/search.png`}className="btn menu" style={{width:"1rem"},{height:"1.5rem"}} id="searchicon"/>
 
-<div className=" col-7 offset-sm-1 col-sm-8 ">
-<Form>
-
- 
-
- <input type="text" className="form-control" id="search" name="search" placeholder="Search for Products" />
- <img src={`${process.env.PUBLIC_URL}/images/search.png`}className="btn menu" style={{width:"1rem"},{height:"1.5rem"}} id="searchicon"/>
- 
- 
- 
- 
- 
-</Form>
-</div>
-<div className="  col-2 col-sm-2 btn menu login" style={{fontSize:".8rem"}}>
-       
-        <img  src={`${process.env.PUBLIC_URL}/images/login.png`} style={{width:"1rem"},{height:"1rem"}}></img>
-        <p style={{color:"white"}}>Signup</p>
-    </div>
-<div className=" col-2 col-sm-1"><img  src={`${process.env.PUBLIC_URL}/images/cart.png`} className="btn menu cart" style={{width:"2rem"},{height:"2rem"}}/></div>
-
-
-
-</div>
-</div>
-</Jumbotron>
-</div>
+    
+  </form>
+<img  src={`${process.env.PUBLIC_URL}/images/cart.png`} className="btn menu cart nav-item" style={{width:"2rem"},{height:"2rem"}}/>
+</nav>
+<div className="container">
+      <h1 style={{ textAlign: "center" }}>Example to setup your carousel in react</h1>
+      <div>
+        <Carousel breakPoints={breakPoints} style={{height:"300px"},{backgroundcolor:"orange"}} enableAutoPlay autoPlaySpeed={1500}>
+          <img src={`${process.env.PUBLIC_URL}/images/surf.jpg`} className="d-block w-100" style={{height:"300px"}}></img>
+          <img src={`${process.env.PUBLIC_URL}/images/surf.jpg`} className="d-block w-100"style={{height:"300px"}}></img>
+          <img src={`${process.env.PUBLIC_URL}/images/surf.jpg`} className="d-block w-100"style={{height:"300px"}}></img>
+          <img src={`${process.env.PUBLIC_URL}/images/surf.jpg`} className="d-block w-100"style={{height:"300px"}}></img>
+          <img src={`${process.env.PUBLIC_URL}/images/surf2.jpg`} className="d-block w-100"style={{height:"300px"}}></img>
+          <img src={`${process.env.PUBLIC_URL}/images/surf2.jpg`} className="d-block w-100"style={{height:"300px"}}></img>
+          <img src={`${process.env.PUBLIC_URL}/images/surf2.jpg`} className="d-block w-100"style={{height:"300px"}}></img>
+          <img src={`${process.env.PUBLIC_URL}/images/surf2.jpg`} className="d-block w-100"style={{height:"300px"}}></img>
+          
+        </Carousel>
+        
+         </div>
+         </div>
 <div>
-
 <Item/>
 </div>
 <div>
@@ -74,6 +63,7 @@ function Home()
 <div>
 <Footer/>
 </div>
+
 </>
     )
 }

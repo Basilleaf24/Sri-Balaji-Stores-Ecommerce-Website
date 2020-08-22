@@ -9,7 +9,8 @@ import Item from 'react-elastic-carousel'
 
 function Categ()
 {
-
+  
+     
     const breakPoints = [
         { width: 1, itemsToShow: 1 },
         { width: 550, itemsToShow: 2 },
@@ -40,31 +41,42 @@ function Categ()
 const k=data.products.map((product)=>
 {
   return(
+    <div key={product.id}>
     <RenderItem product={product}/>
+    </div>
+    
   )
 })
+
   return(
-    <div className="container">
-       <div className="row">
-        <Carousel>
+  
+  
+      <div>
          
           {k.map((product)=>
           {
             return(
-              <Item>{product}</Item>       
+              <div className="row">
+             <div className="col-6 col-md-4 col-lg-6">{product} </div>  
+             <div className="col-6 col-md-4 col-lg-6">{product} </div> 
+                <div className="col-6 col-md-4 col-lg-6">{product} </div> 
+                <div className="col-6 col-md-4 col-lg-6">{product} </div> 
+             </div>       
                )
           })}
-          
-        </Carousel>
-      </div>
-    </div>
+     
+        </div>)
+  
+  
+  }
+  
+    
 
 
 
 
-  )
-}
-               
+  
+        
 
         
 

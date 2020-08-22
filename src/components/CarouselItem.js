@@ -6,7 +6,7 @@ function RenderItem({product})
 {
   
 return(
-   <div className="col-6 col-md-4 col-lg-3">
+   
   <Card>
   <span><Badge>{Math.ceil((1-(product.sp/product.mrp))*100)} %OFF</Badge></span>
     <CardImg  className="cardimg" top width="100%" src={product.image} style={{height:"12rem"}} />
@@ -17,6 +17,6 @@ return(
       <p><button className=" btn cartbutton">-</button><span style={{fontSize:"0.7rem"}}><b>Add to Cart</b></span><button className="cartbutton btn">+</button></p>
     </CardBody>
   </Card>
-  </div>)
+  )
 }
 export default RenderItem

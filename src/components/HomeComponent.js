@@ -3,6 +3,7 @@ import {Card,CardImg,CardText,CardTitle,CardSubtitle, CardBody,Jumbotron, Row,Fo
 //import {Loading} from './LoadingComponent';
 import Categ from './CategoryCourComponent'
 import Footer from './FooterComponent'
+import Item from './itemComponent'
 
 
 function Home()
@@ -62,6 +63,10 @@ function Home()
 </div>
 </div>
 </Jumbotron>
+</div>
+<div>
+
+<Item/>
 </div>
 <div>
 <Categ/>

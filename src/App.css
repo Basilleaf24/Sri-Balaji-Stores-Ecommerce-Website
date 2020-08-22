@@ -46,12 +46,9 @@
 .jumbo
 {
   background-color:black!important;
-  height: 23.5vh!important;
+  height: 25.5vh!important;
   padding:2vh!important;
   color:whitesmoke!important;
-  position: relative;
-  display: fixed;
-  
 }
 
 @media (max-width: 960px) {
@@ -160,6 +157,64 @@ a:link{
   {
     height: 35vw!important;
   }
+  
+  .cartbutton
+  {
+    font-size:8px!important;
+    
+    height:2em!important;
+     width: 2em!important;
+     margin:0.2em!important;
+  }
+  strong
+  {
+    font-size:14px;
+  }
+  
+  
 
 }
+.itemcard
+{
+  width:50vw!important;
+  height:20vh!important;
+}
+.badge
+{
+  background-color:rgb(30, 126, 170);
+  color:white;
+}
+.cartbutton
+{
+  height:1.5rem;
+  width: 1.5rem;
+  margin: 0.5rem;
+  background-color:orangered;
+ 
+  font-size:1rem;
+  font-style: bold;
+  color:white;
+  
+  border-radius: .3rem;
+}
+.cartbutton:hover{
+  background-color:orange;
 
+
+}
+.cartbutton:active{
+ 
+  transform :translateY(4px) scale(0.8);
+  
+
+}
+p{
+  
+  text-align: center;
+
+}
+.cardimg:hover
+{
+  transform :translateY(4px) scale(0.9)!important;
+
+}

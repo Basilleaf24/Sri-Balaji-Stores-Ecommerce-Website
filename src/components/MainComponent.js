@@ -11,8 +11,7 @@ function Main()
     return(
         <>
        <Switch>
-            
-           <Route path="/home" component={Home}/>
+            <Route path="/home" component={Home}/>
            <Route path='/' component={Head}/>
             
     </Switch>

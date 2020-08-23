@@ -41,13 +41,35 @@
   }
 }
 /* jumbotron*/
+
+/*
+side bar*/
+.container
+{
+  border:none;
+}
+.sidebar {
+  
+  width: 23vw!important;
+  background-color:whitesmoke;
+  height: 100%;
+  
+}
 .navbar
 {
   background-color:black!important;
   color:white;
   
 }
-
+.navtop
+{
+  color:white;
+  background-color: black;
+  height:15vh!important;
+  padding:1rem;
+  box-sizing: border-box;
+  vertical-align: auto!important;
+}
 .jumbo
 {
   background-color:black!important;
@@ -55,31 +77,31 @@
   padding:2vh!important;
   color:whitesmoke!important;
 }
-
-@media (max-width: 960px) {
-  .jumbo{
-   height: 18vh!important;
- 
-  }
-  
- }
-@media (max-width: 1400px) {
-  .heading{
-    padding:1px!important;
-    margin-left:5px!important;
-    margin-top:5px!important;
-    font-size:25px!important;
-    
-    
-    
-
-  }
-  .iframe
-  {
-    width: 100%;
-  }
- 
+a
+{
+  font-style:bold;
+  font-size:1.3rem;
+  color:orangered!important;
+  padding-bottom: 4vh;
 }
+a:hover{
+  text-decoration:none;
+}
+.side-items
+{
+  box-sizing: border-box;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+
+  }
+.navbar-brand
+{
+  cursor: pointer;
+}
+
+
+
 
 .btn{
   padding:0px;
@@ -89,11 +111,12 @@
 }
 
 
-.menu:active
+
+.menu:hover,.navicon:hover
 {
-  transform :translateY(4px) scale(0.8);
+  transform : scale(1.2);
   
-  
+
 }
 #search
 {
@@ -103,7 +126,7 @@
 #searchicon
 {
   position:absolute;
-  right:10px;
+  right:16px;
   top:6px;
   
 }
@@ -120,67 +143,11 @@ a:link{
   color:white;
 }
 
-[class*="col-"] {
-  padding-right: 10px;
-  padding-left: 5px;
-  
 
-  
-}
 
-@media (max-width: 576px) {
-  .heading{
-    font-size:8px!important;
-  }
-  .jumbo
-  {
-    height: 30vw!important;
-  }
-  .login
-{
-  margin-left:15px;
-}
-.cart
-{
-  margin-left: 5px;
-}
- 
-}
-@media (max-width: 450px ) {
-  iframe{
-    width: 95%;
-    
-  }
-  .jumbo
-  {
-    height: 30vw!important;
-  }
- 
- 
-}
-@media(max-width:375px)
-{
-  .jumbo
-  {
-    height: 35vw!important;
-  }
-  
-  .cartbutton
-  {
-    font-size:8px!important;
-    
-    height:2em!important;
-     width: 2em!important;
-     margin:0.2em!important;
-  }
-  strong
-  {
-    font-size:14px;
-  }
-  
-  
 
-}
+
+
 .itemcard
 {
   width:50vw!important;
@@ -225,44 +192,104 @@ p{
   transform :translateY(4px) scale(0.9)!important;
 
 }
-.brand button {
-  font-size: 3rem;
-  padding: 0.5rem;
-  background: red;
-  border: none;
-  color: red;
-  cursor: pointer;
+@media (max-width: 1400px) {
+  .heading{
+    padding:1px!important;
+    margin-left:5px!important;
+    margin-top:5px!important;
+    font-size:25px!important;
+  }
+  .iframe
+  {
+    width: 100%;
+  }
+ 
 }
-.sidebar {
-  position: fixed;
-  transition: all 0.5s;
-  transform: translateX(-30rem);
-  width: 30rem;
-  background-color:red;
-  height: 100%;
+@media (max-width: 960px) {
+  .jumbo{
+   height: 18vh!important;
+ 
+  }
+  
+ }
+@media (max-width: 576px) {
+  .heading{
+    font-size:8px!important;
+  }
+  .jumbo
+  {
+    height: 30vw!important;
+  }
+  .login
+{
+  margin-left:15px;
 }
-.sidebar.open {
-  transform: translateX(0);
+.cart
+{
+  margin-left: 5px;
+}
+.navtop{
+  padding-top:2rem;
+}
+ 
+}
+@media (max-width: 450px ) {
+  iframe{
+    width: 95%;
+    
+  }
+  .jumbo
+  {
+    height: 30vw!important;
+  }
+  .sidebar
+  {
+    width: 45vw!important;
+  }
+ 
+ 
+}@media(max-width:375px)
+{
+  .jumbo
+  {
+    height: 35vw!important;
+  }
+  
+  .cartbutton
+  {
+    font-size:8px!important;
+    
+    height:2em!important;
+     width: 2em!important;
+     margin:0.2em!important;
+  }
+ 
+  strong
+  {
+    font-size:14px;
+  }
+}
+@media(max-height:1400px)
+{
+  .navtop{
+    height: 15vh!important;
+    
+  }
+}
+@media(max-height:640px)
+{
+  .navtop{
+    height: 14vh!important;
+  }
+
+}
+@media(max-width:360px)
+{
+  a
+  {
+    font-size:1rem;
+  }
 }
 
-.sidebar-close-button {
-  border-radius: 50%;
-  border: 0.1rem #000000 solid;
-  width: 3rem;
-  height: 3rem;
-  padding: 0.5rem;
-  font-size: 2rem;
-  padding-top: 0;
-  cursor: pointer;
-  position: absolute;
-  right: 0.5rem;
-  top: 1.5rem;
-}
-.brand button {
-  font-size: 3rem;
-  padding: 0.5rem;
-  background: none;
-  border: none;
-  color: #ffffff;
-  cursor: pointer;
-}
+
+

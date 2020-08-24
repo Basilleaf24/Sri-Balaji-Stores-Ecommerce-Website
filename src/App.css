@@ -89,25 +89,19 @@ a:hover{
 }
 .side-items
 {
+  
   box-sizing: border-box;
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-align: center;
-
-  }
+}
 .navbar-brand
 {
   cursor: pointer;
 }
-
-
-
-
 .btn{
   padding:0px;
   margin:0px;
-  
-
 }
 
 
@@ -246,7 +240,7 @@ p{
   {
     width: 45vw!important;
   }
- 
+  
  
 }@media(max-width:375px)
 {
@@ -269,6 +263,15 @@ p{
     font-size:14px;
   }
 }
+/* for scroll*/
+.box
+{
+  max-height:10rem;
+  display: inline-block;
+  overflow: auto;
+}
+
+
 @media(max-height:1400px)
 {
   .navtop{
@@ -281,6 +284,10 @@ p{
   .navtop{
     height: 14vh!important;
   }
+  .categheight
+  {
+    height:25vh;
+  }
 
 }
 @media(max-width:360px)
@@ -290,6 +297,26 @@ p{
     font-size:1rem;
   }
 }
+.box{
+  
+  overflow-x:scroll;
+  
+  
+  white-space: nowrap;
+  
+  
 
+}
+.box::-webkit-scrollbar
+{
+  display: none;
+}
+.itemsscroll
+{
+  display: inline-block;
+  margin-right: 7.5vw;
+  
+  
+}
 
 

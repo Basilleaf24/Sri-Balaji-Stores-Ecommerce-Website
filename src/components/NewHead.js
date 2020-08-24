@@ -32,17 +32,13 @@ function Head()
 
         
           </div>
-         {/* <div className="col-12"> <a onClick={ showSettings } className="menu-item--small" href="">Settings</a>  </div>*/}
         </div>
         </div>
       </Menu>
          
 
             <nav className="navbar fixed-top navbar-light bg-dark">
-  {/*<a className="navbar-brand" onClick={handleClick}><img src={`${process.env.PUBLIC_URL}/images/nav.png`}className="btn menu" style={{width:"1.5rem"},{height:"1.5rem"}} />*/}
-    <a className="navbar-brand" onClick={handleClick}><span className="fa fa-bars fa-lg navicon" style={{color:"white"}}>
-      
-    </span>
+    <a className="navbar-brand" onClick={handleClick}><span className="fa fa-bars fa-lg navicon" style={{color:"white"}}></span>
 
 </a>
 
@@ -68,8 +64,7 @@ function Head()
 
 
 <Item/>
-<Item/>
-<Item/>
+
 </div>
     )
 }

@@ -136,6 +136,10 @@ a:hover{
 a:link{
   color:white;
 }
+.spacingforheader
+{
+  padding:2vh;
+}
 
 
 
@@ -183,7 +187,7 @@ p{
 }
 .cardimg:hover
 {
-  transform :translateY(4px) scale(0.9)!important;
+ 
 
 }
 @media (max-width: 1400px) {
@@ -232,6 +236,10 @@ p{
     width: 95%;
     
   }
+  .spacingforheader
+{
+  padding:6vw;
+}
   .jumbo
   {
     height: 30vw!important;
@@ -300,9 +308,8 @@ p{
 .box{
   
   overflow-x:scroll;
-  
-  
   white-space: nowrap;
+
   
   
 
@@ -318,5 +325,7 @@ p{
   
   
 }
+
+
 
 

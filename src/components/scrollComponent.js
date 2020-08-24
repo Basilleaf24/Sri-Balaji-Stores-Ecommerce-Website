@@ -1,6 +1,21 @@
 import React from 'react';
 import {Card,CardImg,CardBody,CardText,CardSubtitle,Button,CardTitle, Row, Badge} from 'reactstrap'
 import data from '../shared/data'
+import ScrollMenu from 'react-horizontal-scrolling-menu';
+
+ 
+const Arrow = ({ text, className }) => {
+  return (
+    <div
+      className={className}
+    >{text}</div>
+  );
+};
+ 
+ 
+const ArrowLeft = Arrow({ text: '<', className: 'arrow-prev' });
+const ArrowRight = Arrow({ text: '>', className: 'arrow-next' });
+ 
 
 function RenderItem({product})
 {
@@ -18,7 +33,7 @@ return(
   </Card>)
 }
 
-function ScrollItem(props)
+function ScrollItem()
   {
     const items=data.products.map((item)=>
     {
@@ -31,14 +46,29 @@ function ScrollItem(props)
         )
 
     })
-  
- return(
-   <div className="container">
-   <div className="box col-12">
-            {items}
+   /*<div className="container" style={{minHeight:"300px"}}>
+    <div className="row">
+   
+     <div className="box col-12">
+   
+     {items}
+     
+     </div>
 
    </div>
-   </div>
+ </div>*/
+ return(
+  
+  <div>
+   <ScrollMenu  classname="scrollmenu"data={items}   
+          transition={15} inertiaScrollingSlowdown={2} />
+  </div>
+
+
+
+
+
+
  
      
    

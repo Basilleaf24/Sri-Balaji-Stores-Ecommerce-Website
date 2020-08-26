@@ -4,7 +4,7 @@ import {Card,CardImg,CardText,CardTitle,CardSubtitle, CardBody,Jumbotron, Row,Fo
 import styled from'styled-components'
 import Carousel from "react-elastic-carousel";
 import RenderItem from './CarouselItem'
-import data from '../shared/data'
+import data from '../shared/data1'
 import Item from 'react-elastic-carousel'
 
 function Categ()

@@ -1,74 +1,38 @@
 
-export default{
-    products: 
+export const PRODUCTS = 
         [
             {
-             
-              "name": "Dettol",
-              "image": "/images/dettol.jpg",
+              'id':'0',
+              "name": "Pulses 1",
+              "image": "/images/pulses1.jpg",
               "mrp": 105,
-              "qty": "250ml",
+              "qty": "250g",
               "sp":80
             },
             {
-            
-              "name": "Dettol",
-              "image": "/images/dettol.jpg",
+              'id':'1',
+              "name": "Pulses 2",
+              "image": "/images/pulses2.jpg",
               "mrp": 205,
-              "qty": "500ml",
+              "qty": "500g",
               "sp":195
             },
             {
-                           
-                "name": "Surf Excel Front",
-                "image": "/images/surf.jpg",
-                "mrp": 540,
-                "qty": "2kg",
+              'id':'2',    
+                "name": "Pulses 3",
+                "image": "/images/pulses3.jpg",
+                "mrp": 350,
+                "qty": "1kg",
                 "sp":450
               ,
             },
             {
-                           
-              "name": "Surf Excel Front",
-              "image": "/images/surf.jpg",
+              'id':'3',           
+              "name": "Pulses 4",
+              "image": "/images/pulses4.jpg",
               "mrp": 540,
               "qty": "2kg",
               "sp":450
             ,
-          },
-          {
-             
-            "name": "Dettol",
-            "image": "/images/dettol.jpg",
-            "mrp": 105,
-            "qty": "250ml",
-            "sp":80
-          },
-          {
-          
-            "name": "Dettol",
-            "image": "/images/dettol.jpg",
-            "mrp": 205,
-            "qty": "500ml",
-            "sp":195
-          },
-          {
-                           
-            "name": "Surf Excel Front",
-            "image": "/images/surf.jpg",
-            "mrp": 540,
-            "qty": "2kg",
-            "sp":450
-          ,
-        },
-        {
-                       
-          "name": "Surf Excel Front",
-          "image": "/images/surf.jpg",
-          "mrp": 540,
-          "qty": "2kg",
-          "sp":450
-        ,
-      }
+          }
     ]
-}

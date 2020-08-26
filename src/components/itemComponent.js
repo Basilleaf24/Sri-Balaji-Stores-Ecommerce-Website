@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card,CardImg,CardBody,CardText,CardSubtitle,Button,CardTitle, Row, Badge} from 'reactstrap'
-import data from '../shared/data'
-
+import data from '../shared/data1'
+import SearchBar from './searchbar'
 function RenderItem({product})
 {
   

@@ -1,8 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import {Nav, NavItem, Navbar, Button,Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input} from 'reactstrap'
 import { slide as Menu } from 'react-burger-menu'
+import { useSelector, useDispatch } from 'react-redux';
+import { signin,login,register } from '../redux/actions/useractions';
+// for dispatching
 function HomeHeader()
 {
+
+
+    const Signin = useSelector(state => state.userSignin);
+    const { loading1, userSignin, error1} = Signin;
+    const dispatch = useDispatch();
+
+    const Login = useSelector(state => state.userLogin);
+    const { loading2, userInfo, error2 } = Login;
+    
+
+  //  const Register = useSelector(state => state.userRegister);
+    //const { loading, userInfo, error } = userRegister;
+
+
+
+
+
+
+
     const [isOpen, setSide] = useState(false)
     function handleClick()
     {
@@ -15,6 +37,8 @@ function HomeHeader()
 const [email, setEmail] = useState('');
 const [password , setPassword] = useState('');
 const [isModalOpen , setToggle] = useState(false);
+
+const [isloginOpen , setTogglelogin] = useState(false);
 const [isinfoOpen,setInfo]=useState(false)
 const[state,setstate]=useState({name:'', phone:'', address:'' });
 
@@ -37,11 +61,13 @@ function submithandle(e)
 function handleSubmit(e) {
  
   setInfo(!isinfoOpen)
+  dispatch(register(state.name,state.phone,state.address));
 }
 
 
 
 function toggleModal() {
+    setTogglelogin(!isloginOpen)
   setSide(false)
   setToggle(!isModalOpen)
 } 
@@ -49,9 +75,27 @@ function toggleModal() {
 function submitHandler(e) {
   toggleModal();
   setInfo(true);
+  dispatch(signin(email, password));
   e.preventDefault();
 
 }
+
+function toggleModallogin() {
+    setSide(false)
+    setTogglelogin(!isloginOpen)
+  } 
+function submitHandlerlogin(e) {
+    toggleModallogin();
+    dispatch(login(email, password));
+    
+    e.preventDefault();
+  
+  }
+
+
+
+
+
     return(
         <>
         <div>
@@ -59,7 +103,7 @@ function submitHandler(e) {
     <div className="container">
       <div className="row">
      
-   <div className="col-12 navtop"><div className="row"><div className="offset-1 col-7"><p onClick={toggleModal} style={{cursor:"pointer"}}><span className="fa fa-sign-in"></span> SignIn</p></div><p onClick={handleClick} className=" col-2 fa fa-arrow-left "style={{cursor:"pointer"}}></p></div></div>
+   <div className="col-12 navtop"><div className="row"><div className="offset-1 col-7"><p onClick={toggleModallogin} style={{cursor:"pointer"}}><span className="fa fa-sign-in"></span> SignIn</p></div><p onClick={handleClick} className=" col-2 fa fa-arrow-left "style={{cursor:"pointer"}}></p></div></div>
    <div className="side-items">
    <div className="col-12 container"><a href ='/home'className="menu-item row"><span className="fa fa-home fa-lg offset-1 offset-sm-2  offset-lg-2 col-1 p-1"></span><span className="offset-1 offset-sm-2  col-7 col-sm-6">Home</span></a></div> 
    <div className="col-12 container" onClick={()=>setSide(false)}><a href ='#accordian'className="menu-item row"><span className="fa fa-th-large fa-lg offset-1 offset-sm-2 offset-lg-2 col-1 p-1"></span><span className="offset-1 offset-sm-2 col-7 col-sm-6"> Categories</span></a></div> 
@@ -108,6 +152,37 @@ function submitHandler(e) {
   
 </div>
 </div>
+{/* login modal*/}
+
+<div className="container">
+ <Modal isOpen = {isloginOpen} toggle={toggleModallogin}>
+            <ModalHeader toggle={toggleModallogin} className='modal-text'> <strong>LOG-IN</strong> </ModalHeader>
+            <ModalBody>
+                <Form onSubmit={submitHandlerlogin}>
+                    <FormGroup>
+                        <Label htmlFor='email'><strong> Email</strong> </Label>
+                        <Input type='email' name='email' id='email' placeholder='Email'  onChange= {(e)=> setEmail(e.target.value)}></Input>
+                    </FormGroup>
+                    <FormGroup>
+                        <Label htmlFor='password'> <strong>Password</strong></Label>
+                        <Input type='password' name='password' id='password' placeholder='Password' onChange={(e)=> setPassword(e.target.value)}></Input>
+                    </FormGroup>
+                    <FormGroup className='row'>
+                        <Button className='col-10 col-sm-6 offset-sm-3' type='submit' value='submit' color='primary'><span className='fa fa-paper-plane fa-lg' ></span> LOGIN </Button>
+                    </FormGroup>
+                    <FormGroup className='row'>
+                        <Button className='col-10 col-sm-6 offset-sm-3' type='submit' value='submit' color='danger'> <span className="fa fa-google fa-lg" ></span>   Sign-In with Google</Button>
+                    </FormGroup>
+                    <FormGroup className='row'>
+                        <Button className='col-10 col-sm-6 offset-sm-3' type='submit' value='submit' color='primary'> <span className="fa fa-facebook fa-lg" ></span>   Sign-In with facebook</Button>
+                    </FormGroup>
+                </Form>
+                <Button className="btn" onClick={toggleModal}>Don't have an account?</Button>
+            </ModalBody>
+        </Modal>
+    </div>
+
+
 
 
 <div className="container">
@@ -139,7 +214,7 @@ function submitHandler(e) {
                 </Form>
             </ModalBody>
         </Modal>
-        </div>
+    </div>
         
 
       <div className='container'>
@@ -166,6 +241,8 @@ function submitHandler(e) {
                 </ModalBody>
             </Modal>
     </div>
+
+
 
 
 

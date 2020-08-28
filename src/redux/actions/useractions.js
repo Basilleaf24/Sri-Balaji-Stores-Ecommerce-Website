@@ -34,12 +34,14 @@ const signin = (email, password) => async (dispatch) => {
   
   const register = (name,phone,address) => async (dispatch) => {
     dispatch({ type: USER_REGISTER_REQUEST, payload: { name,phone, address} });
+    console.log(name + phone +address)
     try {
-      const { data } = await Axios.post("/users/register", { name,phone, address });
+      const { data } = await Axios.put("/users/signin", { name,phone, address });
       dispatch({ type: USER_REGISTER_SUCCESS, payload: data });
+      Cookie.set('userRegister', JSON.stringify(data));
     } catch (error) {
       dispatch({ type: USER_REGISTER_FAIL, payload: error.message });
-    }
+    } 
   }
 
   /*const update = ({ userId, password }) => async (dispatch, getState) => {

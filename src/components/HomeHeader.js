@@ -14,10 +14,12 @@ function HomeHeader()
 
     const Login = useSelector(state => state.userLogin);
     const { loading2, userInfo, error2 } = Login;
+
+    
     
 
-  //  const Register = useSelector(state => state.userRegister);
-    //const { loading, userInfo, error } = userRegister;
+   const Register = useSelector(state => state.userRegister);
+    const { loading, userRegister, error } = Register;
 
 
 
@@ -56,15 +58,14 @@ function submithandle(e)
         address: state.address
        
     }
+    dispatch(register(state.name,state.phone,state.address));
     setInfo(!isinfoOpen)
 }
 function handleSubmit(e) {
  
   setInfo(!isinfoOpen)
-  dispatch(register(state.name,state.phone,state.address));
+  
 }
-
-
 
 function toggleModal() {
     setTogglelogin(!isloginOpen)

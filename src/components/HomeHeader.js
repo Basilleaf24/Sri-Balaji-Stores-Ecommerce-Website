@@ -86,7 +86,7 @@ function toggleModallogin() {
   } 
 function submitHandlerlogin(e) {
     toggleModallogin();
-    dispatch(login(email, password));
+    dispatch(login(email, password));//login dispatch
     
     e.preventDefault();
   
